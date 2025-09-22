@@ -5,7 +5,7 @@ This repository contains my solutions and practice codes for **Data Structures a
 
 The goal of this repo is to:
 - Strengthen my understanding of DSA concepts
-- Build problem-solving skills for placements
+- Build problem-solving skills
 - Maintain a clean and structured coding journal
 
 ---
