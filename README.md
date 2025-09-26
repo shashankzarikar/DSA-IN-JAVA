@@ -32,5 +32,6 @@ The codes are organized topic-wise:
 17. **Divide and Conquer**
 18. **Backtracking**
 19. **ArrayList**
+20. **LinkedList**
 
 
