@@ -39,7 +39,7 @@ public class SearchinLL {
         System.out.println("null");
     }
     // Iterative search 
-    public int iterativeSearch(int key){
+    public int iterativeSearch(int key){ //T.C =O(n)  S.C = O(1)
         Node temp=head;
         int idx=0;
         while(temp!=null){
@@ -60,6 +60,7 @@ public class SearchinLL {
       
     }
     public int helper(Node head,int key,int idx){
+        //base case
           if(head==null){
             return -1;
         }
