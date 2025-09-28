@@ -1,3 +1,5 @@
+//Remove nth Node from last
+
 public class RemoveNthNodefromLast {
      public static class LinkedList {
         public class Node {
