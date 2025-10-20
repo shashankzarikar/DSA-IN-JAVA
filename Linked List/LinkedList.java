@@ -139,6 +139,7 @@ public class LinkedList {
         ll.removeLast();
         ll.printLL();
         System.out.println(ll.size);
+        System.out.println(ll.tail.data);
 
 
     }
