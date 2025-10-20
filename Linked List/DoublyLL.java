@@ -63,8 +63,8 @@ public class DoublyLL {
         return val;
     }
     int val=tail.data;
-    tail.prev.next=null;
-    tail.prev=null;
+    tail=tail.prev;
+    tail.next=null;
     size--;
     return val;
    }
@@ -97,7 +97,8 @@ public class DoublyLL {
     System.out.println( dll.removeLast());
     System.out.println(dll.removeFirst());
      dll.printDLL();
-     System.out.println(dll.size);
+     System.out.println(dll.tail.data);
+     System.out.println(dll.head.data);
    }
 
     
