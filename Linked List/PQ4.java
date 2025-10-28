@@ -1,4 +1,5 @@
-//Odd Even Linked List We have a Linked List of integers ,write a function to
+//Odd Even Linked List
+// We have a Linked List of integers ,write a function to
 // modify the linked list such that all even numbers appear before all the odd
 // numbers in the modified linkedlist.Also,keep the order of even and odd numbers same
 public class PQ4 {
