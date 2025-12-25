@@ -1,8 +1,8 @@
 public class ImplementationArray {
     public static class Queue{
-        static int arr[];
-        static int size;
-        static int rear;
+         int arr[];
+         int size;
+         int rear;
 
         Queue(int n){
             arr = new int[n];
@@ -10,11 +10,11 @@ public class ImplementationArray {
             rear=-1;
         }
         //is Empty
-        public static boolean isEmpty(){
+        public  boolean isEmpty(){
             return rear==-1;
         }
         //add       Time Comlexity=O(1)
-        public static void add(int data){
+        public  void add(int data){
             if(rear==size-1){
                 System.out.println("Queue is full !");
                 return;
@@ -23,7 +23,7 @@ public class ImplementationArray {
             arr[rear]=data;
         }
         //Remove    Time Comlexity=O(n)
-        public static int remove(){
+        public  int remove(){
             if(rear==-1){
                 System.out.println("Queue is empty");
                 return -1;
@@ -36,7 +36,7 @@ public class ImplementationArray {
             return front;
         }
         //Peek      Time Comlexity=O(1)
-        public static int peek(){
+        public  int peek(){
             if(rear==-1){
                 System.out.println("Queue is empty");
                 return -1;
@@ -53,6 +53,7 @@ public class ImplementationArray {
             System.out.println(q.peek());
             q.remove();
            }
+           
 
       }
 }
