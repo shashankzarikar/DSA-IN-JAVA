@@ -34,5 +34,6 @@ The codes are organized topic-wise:
 19. **ArrayList**
 20. **LinkedList**
 21. **Stack**
+22. **Queue**
 
 
