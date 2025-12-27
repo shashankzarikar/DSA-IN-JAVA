@@ -1,4 +1,4 @@
-// First non repeating letters in a stram of characters
+// First non repeating letters in a stream of characters
 
 // Time Complexity=O(n) because each character in a string is added and removed from queue ony once
 // Space Complexity=O(n)
