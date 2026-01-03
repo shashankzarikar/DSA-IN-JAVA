@@ -1,11 +1,11 @@
 import java.util.*;
 public class QueueImplementationUsingDeque {
     public static class Queue{
-        // Using ArrayDeque gives amortized O(1) enqueue/dequeue with better cache locality and lower
+        // Using ArrayDeque gives amortized O(1) enqueue with better cache locality and lower
         //  memory overhead than LinkedList, despite occasional O(n) resizing.
 
         Deque<Integer> dq = new ArrayDeque<>();
-        //is Empty   Time Complexity=Amortized O(1)
+        //is Empty   Time Complexity= O(1)
         public boolean isEmpty(){
             return dq.isEmpty();
         }
@@ -13,11 +13,11 @@ public class QueueImplementationUsingDeque {
         public void add(int data){
             dq.addLast(data);
         }
-        //remove     Time Complexity=Amortized O(1)
+        //remove     Time Complexity= O(1)
         public int remove(){
             return dq.removeFirst();
         }
-        //Peek       Time Complexity=Amortized O(1)
+        //Peek       Time Complexity= O(1)
         public int peek(){
             return dq.getFirst();
         }
