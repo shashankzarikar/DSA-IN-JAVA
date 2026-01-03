@@ -35,5 +35,6 @@ The codes are organized topic-wise:
 20. **LinkedList**
 21. **Stack**
 22. **Queue**
+23. **Greedy Algorithms**
 
 
