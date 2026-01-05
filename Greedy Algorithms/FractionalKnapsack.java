@@ -15,17 +15,19 @@ public class FractionalKnapsack {
         final int VALUE = 0;
         final int WEIGHT = 1;
         final int RATIO = 2;
-
+        
         double matrix[][] = new double[value.length][3];
         for (int i = 0; i < value.length; i++) {
             matrix[i][VALUE] = value[i];
             matrix[i][WEIGHT] = weight[i];
             matrix[i][RATIO] = (double) value[i] / weight[i];
         }
-
+        
+        //Sort matrix array according to ratio  
         Arrays.sort(matrix, Comparator.comparingDouble(o -> o[RATIO]));
         double totalvalue = 0;
         double remainingcapacity = capacity;
+        //we want ratio in descending order but we sorted array in ascending order so iterate k from last index to 0
         for (int k = matrix.length-1; k>=0&& remainingcapacity > 0; k--) {
             if (matrix[k][WEIGHT] <= remainingcapacity) {
                 totalvalue += matrix[k][VALUE];
