@@ -1,3 +1,4 @@
+import java.util.*;
 public class BTPreordertraversal {
     static class Node{
         int data;
@@ -44,7 +45,34 @@ public class BTPreordertraversal {
         postorder(root.right);
         System.out.print(root.data+" ");
       }
+
+      public static void levelorder(Node root){
+
+        if(root==null) return;
+       
+        Queue<Node> q=new LinkedList<>();
+        q.add(root);
+        q.add(null);
+
+        while(!q.isEmpty()){
+
+            Node temp=q.remove();
+            
+            if(temp==null){
+                if(q.isEmpty()) break;
+                else{
+                  System.out.println();
+                  q.add(null);
+                } 
+            }else{
+                System.out.print(temp.data+" ");
+                if(temp.left!=null) q.add(temp.left);
+                if(temp.right!=null) q.add(temp.right);
+            } 
+       }
+
       }
+    }
     public static void main(String args[]){
 
         int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
@@ -63,6 +91,10 @@ public class BTPreordertraversal {
         System.out.println();
         System.out.println("Print tree using postorder traversal");
         tree.postorder(root);
+
+        System.out.println();
+        System.out.println("Print tree using levelorder traversal");
+        tree.levelorder(root);
 
     }
 }
