@@ -85,6 +85,12 @@ public class BT {
         int rightcount=countNodes(root.right);
         return leftcount+rightcount+1;
       }
+      public static int sumNodes(Node root){
+        if(root==null) return 0;
+        int leftsum=sumNodes(root.left);
+        int rightsum=sumNodes(root.right);
+        return leftsum+rightsum+root.data;
+      }
     }
     public static void main(String args[]){
 
@@ -113,6 +119,8 @@ public class BT {
         System.out.println("Height of tree is :"+tree.height(root));
 
         System.out.println("Count of Nodes in tree is :"+tree.countNodes(root));
+
+        System.out.println("Sum of nodes in tree is :"+tree.sumNodes(root));
 
     }
 }
