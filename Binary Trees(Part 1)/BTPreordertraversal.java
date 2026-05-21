@@ -16,7 +16,7 @@ public class BTPreordertraversal {
 
         static int idx=-1;
 
-        public static Node buildTree(int nodes[]){
+        public static Node buildTree(int nodes[]){ 
            idx++;
            if(nodes[idx]==-1) return null;
            Node newNode =new Node(nodes[idx]);
@@ -72,6 +72,13 @@ public class BTPreordertraversal {
        }
 
       }
+      public static int height(Node root){ //TC=O(n)
+         if(root==null) return 0;
+         int lh=height(root.left);
+         int rh=height(root.right);
+         int currheight=Math.max(lh,rh)+1;
+         return currheight;
+      }
     }
     public static void main(String args[]){
 
@@ -95,6 +102,9 @@ public class BTPreordertraversal {
         System.out.println();
         System.out.println("Print tree using levelorder traversal");
         tree.levelorder(root);
+
+        System.out.println();
+        System.out.println("Height of tree is :"+tree.height(root));
 
     }
 }
