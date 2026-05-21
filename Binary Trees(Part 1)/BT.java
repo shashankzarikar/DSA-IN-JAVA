@@ -1,5 +1,5 @@
 import java.util.*;
-public class BTPreordertraversal {
+public class BT {
     static class Node{
         int data;
         Node left;
@@ -79,6 +79,12 @@ public class BTPreordertraversal {
          int currheight=Math.max(lh,rh)+1;
          return currheight;
       }
+      public static int countNodes(Node root){
+        if(root==null) return 0;
+        int leftcount=countNodes(root.left);
+        int rightcount=countNodes(root.right);
+        return leftcount+rightcount+1;
+      }
     }
     public static void main(String args[]){
 
@@ -105,6 +111,8 @@ public class BTPreordertraversal {
 
         System.out.println();
         System.out.println("Height of tree is :"+tree.height(root));
+
+        System.out.println("Count of Nodes in tree is :"+tree.countNodes(root));
 
     }
 }
