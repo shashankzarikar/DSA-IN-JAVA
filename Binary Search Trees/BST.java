@@ -36,6 +36,48 @@ public class BST{
         }
     }
 
+    public static Node delete(Node root , int value){ //TC=O(h) h=height of tree
+
+        if(root==null) return null;
+
+        if(root.data<value) {
+            root.right=delete(root.right,value);
+            return root;
+        }
+        else if(root.data>value){
+            root.left=delete(root.left,value);
+            return root;
+        }
+        else{
+            //case 1 :- leaf node 
+            if(root.left==null && root.right==null) {
+                return null;
+            }
+
+            //case 2 :- 1 child
+            if(root.right==null){
+                return root.left;
+            }
+            else if(root.left==null){
+                return root.right;
+            }
+
+            //Case 3 :- 2 child 
+            Node inordersuccessor=findinordersuccessor(root.right);
+            root.data=inordersuccessor.data;
+            root.right=delete(root.right,inordersuccessor.data);
+        }
+        return root;
+
+    }
+
+    public static Node findinordersuccessor(Node root){
+            while(root.left!=null){
+                root=root.left;
+            }
+            return root;
+        }
+
     public static void inorder(Node root){
         if(root==null) return;
         inorder(root.left);
@@ -51,6 +93,9 @@ public class BST{
         }
         inorder(root);
         System.out.println();
-        System.out.println(searchNode(root,9));
+        System.out.println(searchNode(root,5));
+
+        root=delete(root,9);
+        inorder(root);
     }
 }
