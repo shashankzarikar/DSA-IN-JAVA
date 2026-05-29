@@ -37,4 +37,5 @@ The codes are organized topic-wise:
 22. **Queue**
 23. **Greedy Algorithms**
 24. **Binary trees**
+25. **Binary Search Trees**
 
