@@ -136,6 +136,20 @@ public class BST{
 
         return isValidBST(root.left,min,root) && isValidBST(root.right,root,max); 
     }
+
+    public static Node mirrorBST(Node root){
+
+        if(root==null) return null;
+        //find mirror of left subtree
+        Node leftMirror=mirrorBST(root.left);
+        //find mirror of right subtree
+        Node rightMirror=mirrorBST(root.right);
+        //join left subtree mirror to rightside and right subtree mirror to left side 
+        root.right=leftMirror;
+        root.left=rightMirror;
+
+        return root;
+    }
     public static void main(String args[]){
         int values[]={5,1,3,4,2,7};
         Node root=null;
@@ -152,12 +166,18 @@ public class BST{
        // printInRange(root,3,7);
        //ArrayList<Integer> path=new ArrayList<>();
        //rootToLeaf(root,path);
-
+       
+       /*
        if(isValidBST(root,null,null)){
          System.out.println("Valid");
        }
        else{
          System.out.println("Invalid");
        }
+         */
+        inorder(root);
+        Node mirrorNode =mirrorBST(root);
+        System.out.println();
+        inorder(mirrorNode);
     }
 }
