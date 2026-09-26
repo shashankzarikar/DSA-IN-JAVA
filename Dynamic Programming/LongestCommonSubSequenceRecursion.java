@@ -1,4 +1,4 @@
-public class LongestCommonSubSequence {
+public class LongestCommonSubSequenceRecursion {
     public static int lcs(String str1, String str2 , int n ,int m){
     
         if(n==0 || m==0) return 0;
