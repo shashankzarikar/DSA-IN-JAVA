@@ -12,7 +12,7 @@ public class CountingBSTsTabulation {
 
         int dp[]=new int[n+1];
 
-        // initilization  dp[i]= new of possible BSTs with i nodes 
+        // initilization  dp[i]= number of possible BSTs with i nodes 
         dp[0]=1;
         dp[1]=1;
 
