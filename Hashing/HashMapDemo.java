@@ -1,5 +1,5 @@
 import java.util.HashMap;
-
+import java.util.Set;
 public class HashMapDemo {
     public static void main(String args[]){
         HashMap<String,Integer> hmap = new HashMap<>();
@@ -33,10 +33,17 @@ public class HashMapDemo {
 
         // clear
 
-        hmap.clear();
+        // hmap.clear();
 
 
         System.out.println(hmap);
+
+        Set<String> keys= hmap.keySet();
+
+        for(String k : keys){
+            System.out.println("key="+k+", value="+hmap.get(k));
+        }
+
     }
     
 }
