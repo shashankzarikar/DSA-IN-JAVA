@@ -39,3 +39,4 @@ The codes are organized topic-wise:
 24. **Binary trees**
 25. **Binary Search Trees**
 26. **Dynamic Programming**
+27. **Hashing**
